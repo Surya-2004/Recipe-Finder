@@ -11,7 +11,7 @@ searchInput.addEventListener('keypress', function(event) {
     const ingredients = searchInput.value; // Get the value from the search input
     const number = 10; // Number of recipes to return
 
-    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=${number}&apiKey=6fe40584f31149478a0d3f9b35e52e8c`;
+    const apiUrl = `https://api.spoonacular.com/recipes/findByIngredients?ingredients=${ingredients}&number=${number}&apiKey=25afc86f84f0419eb54b2141471c2802`;
 
     // Assume the API endpoint for retrieving recipe data is apiUrl
 

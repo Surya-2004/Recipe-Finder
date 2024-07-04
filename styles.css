@@ -152,7 +152,7 @@ a {
 
 }
 
-.search-container:hover>.search-input {
+.search-container:hover>.search-input{
     width: 400px;
 }
 
@@ -171,7 +171,7 @@ a {
     color: #5cbdbb;
 }
 
-@keyframes hoverShake {
+/* @keyframes hoverShake {
     0% {
         transform: skew(0deg, 0deg);
     }
@@ -191,7 +191,7 @@ a {
 
 .search-container:hover {
     animation: hoverShake 0.15s linear 3;
-}
+} */
 
 .sidenav {
     height: 100%;
@@ -228,11 +228,15 @@ a {
     transition: margin-left 0.5s;
 }
 
-.openbtn {
+button.openbtn {
     font-size: 20px;
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     height: 50px;
-    width: 150px;
-}
+    width: 50px;
+    border: none;
+    text-align: center;
+    padding: 0;
+  }
+  

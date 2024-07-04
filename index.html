@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- <button onclick="logout()" class="logout">Log Out</button> -->
+    <div class="button-class" id="buttons">
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+        <a href="signup.html">
+            <button>Sign up</button>
+        </a>
+    </div>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <div class="container">
+        <form action="script.js"></form>
+        <div class="search-container">
+            <input type="text" name="search" placeholder="Search..." class="search-input" id="search">
+            <a href="#" class="search-btn">
+                <i class="fas fa-search"><img src="assets/search.png"></i>
+            </a>
+        </div>
+        </form>
+    </div>
+    <button class="openbtn" onclick="toggleNav()">☰</button>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">×</a>
+        <a href="#home">Home</a>
+        <a href="about.html">About</a>
+        <a href="#contact">Contact</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign up</a>
+    </div>
+    <script>
+        function toggleNav() {
+            document.getElementById("mySidenav").classList.toggle('open');
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

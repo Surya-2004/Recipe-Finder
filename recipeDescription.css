@@ -1,0 +1,8 @@
+body{
+    display: flex;
+    height: 100vh;
+    margin:auto auto;
+}
+.recipeContainer{
+    border: 1px solid black;
+}

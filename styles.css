@@ -1,9 +1,9 @@
+
 body {
     margin: auto;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     overflow: auto;
-    background: linear-gradient(315deg, rgba(101, 0, 94, 1) 3%, rgba(60, 132, 206, 1) 38%, rgba(48, 238, 226, 1) 68%, rgba(255, 25, 25, 1) 98%);
-    animation: gradient 15s ease infinite;
+    background-color: #28caca;
     background-size: 400% 400%;
     background-attachment: fixed;
 }
@@ -70,7 +70,7 @@ body {
     }
 }
 
-button {
+.button {
   appearance: none;
   background-color: transparent;
   border: 2px solid #1A1A1A;
@@ -98,18 +98,18 @@ button {
   will-change: transform;
 }
 
-button:disabled {
+.button:disabled {
   pointer-events: none;
 }
 
-button:hover {
+.button:hover {
   color: #fff;
   background-color: #1A1A1A;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-button:active {
+.button:active {
   box-shadow: none;
   transform: translateY(0);
 }
@@ -170,27 +170,6 @@ a {
     color: #5cbdbb;
 }
 
-/* @keyframes hoverShake {
-    0% {
-        transform: skew(0deg, 0deg);
-    }
-
-    25% {
-        transform: skew(5deg, 5deg);
-    }
-
-    75% {
-        transform: skew(-5deg, -5deg);
-    }
-
-    100% {
-        transform: skew(0deg, 0deg);
-    }
-}
-
-.search-container:hover {
-    animation: hoverShake 0.15s linear 3;
-} */
 
 .sidenav {
     height: 100%;
@@ -199,10 +178,13 @@ a {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: #908888ac;
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+    backdrop-filter: blur(3px);
     overflow-x: hidden;
     padding-top: 20px;
-    transition: 0.5s;
+    transition: all 0.5s ease-in-out;
 }
 
 .sidenav.open {
@@ -213,7 +195,7 @@ a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #1f1c1c;
     display: block;
 }
 
@@ -239,3 +221,74 @@ button.openbtn {
     padding: 0;
   }
   
+h1,h2{
+    padding-left: 15px;
+}
+
+section{
+     display: flex;
+     justify-content: center;
+}
+
+#foodFact{
+    border-radius: 10px;
+    background-color: #38696938;
+    margin: 25px;
+    height: 100px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foodFact p{
+    font-size: medium;
+}
+#recommendations{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.recommendation{
+    height: auto;
+    width: 450px;
+    background-color: #38696938;
+    color: rgb(216, 232, 238);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    &:hover{
+        scale: 1.03;
+    }
+
+}
+
+.recommendation img {
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.recommendation h2 {
+    text-align: center;
+}
+
+.view-recipe-btn{
+    margin: 15px;
+    height: 30px;
+    background-color: aqua;
+    border: none;
+    border-radius: 7px;
+
+    &:hover{
+        background-color: rgb(172, 232, 232);
+    }
+}

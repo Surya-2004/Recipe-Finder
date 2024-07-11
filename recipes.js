@@ -17,8 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
       const title = document.createElement('h2');
       title.textContent = recipe.title;
       card.appendChild(title);
+      const btn = document.createElement('button');
+      btn.textContent = 'View Recipe';
+      btn.classList.add('view-recipe-btn');
+      card.appendChild(btn);
 
-      card.addEventListener('click', function() {
+      btn.addEventListener('click', function() {
         // Store the clicked card ID in session storage
         sessionStorage.setItem('clickedCardId', card.id);
         // Store the ingredients in session storage
@@ -34,5 +38,13 @@ document.addEventListener('DOMContentLoaded', function() {
     recipesData.forEach(recipe => {
       createRecipeCard(recipe);
     });
+
+    if(recipesData.length == 0){
+      const emptyMsg = document.createElement('p');
+      emptyMsg.classList.add('empty-msg');
+      emptyMsg.textContent = "No recipes found";
+      document.getElementById('recipeCardsContainer').appendChild(emptyMsg);
+    }
   });
+
   
